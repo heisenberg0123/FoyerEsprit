@@ -18,7 +18,6 @@ public class Bloc {
 
 
     @ManyToOne
-            //(mappedBy="blocs")
     private Foyer foyer;
 
     @OneToMany
