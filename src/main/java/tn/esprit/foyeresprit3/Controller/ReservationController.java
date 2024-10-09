@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.foyeresprit3.Services.IChambreService;
 import tn.esprit.foyeresprit3.Services.IReservationService;
+import tn.esprit.foyeresprit3.entité.Bloc;
 import tn.esprit.foyeresprit3.entité.Chambre;
 import tn.esprit.foyeresprit3.entité.Reservation;
 
@@ -51,7 +52,12 @@ public class ReservationController {
         return res;
     }
 
-
+    //http://localhost:8089/tpfoyer/reservation/retrieve-reservation/8
+    @GetMapping("/retrieve-reservation/{reservation-id}")
+    public Reservation retrieveReservation(@PathVariable("reservation-id") String chId) {
+        Reservation reservation = reservationService.findById(chId);
+        return reservation;
+    }
 
 
 }

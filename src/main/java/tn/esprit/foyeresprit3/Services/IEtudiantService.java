@@ -9,4 +9,7 @@ public interface IEtudiantService {
     void deleteEtudiant(Long idCEtudiant);
     List<Etudiant> getAllEtudiant();
     Etudiant updateEtudiant(Etudiant etudiant);
+
+    Etudiant findById(Long id);
+
 }

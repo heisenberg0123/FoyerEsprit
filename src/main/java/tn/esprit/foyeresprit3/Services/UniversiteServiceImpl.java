@@ -33,4 +33,11 @@ ur.deleteById(idFUniversite);
     public Universite updateUniversite(Universite universite) {
         return ur.save(universite);
     }
+
+
+    @Override
+    public Universite findById(Long id){
+        return ur.findById(id).get();
+    }
+
 }

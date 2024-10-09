@@ -32,4 +32,11 @@ fr.deleteById(idFoyer);
     public Foyer updateFoyer(Foyer foyer) {
         return fr.save(foyer);
     }
+
+    @Override
+    public Foyer findById(Long id){
+        return fr.findById(id).get();
+    }
+
+
 }

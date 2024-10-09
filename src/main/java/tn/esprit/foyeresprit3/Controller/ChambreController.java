@@ -3,6 +3,7 @@ package tn.esprit.foyeresprit3.Controller;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.foyeresprit3.Services.IChambreService;
+import tn.esprit.foyeresprit3.entité.Bloc;
 import tn.esprit.foyeresprit3.entité.Chambre;
 
 import java.util.List;
@@ -40,6 +41,16 @@ public class ChambreController {
         Chambre chambre = chambreService.updateChambre(c);
         return chambre;
     }
+
+    //http://localhost:8089/tpfoyer/chambre/retrieve-chambre/8
+    @GetMapping("/retrieve-chambre/{chambre-id}")
+    public Chambre retrieveChambre(@PathVariable("chambre-id") Long chId) {
+        Chambre chambre = chambreService.findById(chId);
+        return chambre;
+    }
+
+
+
 }
 
 

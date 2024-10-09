@@ -32,4 +32,11 @@ chr.deleteById(idChambre);
     public Chambre updateChambre(Chambre chambre) {
         return chr.save(chambre);
     }
+
+
+    public Chambre findById(Long id){
+        return  chr.findById(id).get();
+    }
+
+
 }

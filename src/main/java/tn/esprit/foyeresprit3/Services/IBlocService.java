@@ -10,4 +10,8 @@ public interface IBlocService {
     void deleteBloc(Long idBloc);
     List<Bloc> getAllBloc();
     Bloc updateBloc(Bloc bloc);
+
+    Bloc findById(Long id);
+
+
 }

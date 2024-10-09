@@ -10,4 +10,7 @@ public interface IChambreService {
     void deleteChambre(Long idChambre);
     List<Chambre> getAllChambre();
     Chambre updateChambre(Chambre chambre);
+
+    Chambre findById(Long id);
+
 }

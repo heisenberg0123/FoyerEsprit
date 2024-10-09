@@ -34,4 +34,11 @@ br.deleteById(idBloc);
     public Bloc updateBloc(Bloc bloc) {
         return br.save(bloc);
     }
+
+    @Override
+    public Bloc findById(Long id){
+        return br.findById(id).get();
+    }
+
+
 }

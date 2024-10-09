@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.foyeresprit3.Services.IChambreService;
 import tn.esprit.foyeresprit3.Services.IEtudiantService;
+import tn.esprit.foyeresprit3.entité.Bloc;
 import tn.esprit.foyeresprit3.entité.Chambre;
 import tn.esprit.foyeresprit3.entité.Etudiant;
 
@@ -46,7 +47,12 @@ public class EtudiantController {
         return e;
     }
 
-
+    //http://localhost:8089/tpfoyer/etudiant/retrieve-etudiant/8
+    @GetMapping("/retrieve-etudiant/{etudiant-id}")
+    public Etudiant retrieveEtudiant(@PathVariable("etudiant-id") Long chId) {
+        Etudiant etudiant = etudiantService.findById(chId);
+        return etudiant;
+    }
 
 
 }

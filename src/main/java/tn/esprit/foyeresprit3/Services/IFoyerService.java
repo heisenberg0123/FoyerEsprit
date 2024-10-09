@@ -12,4 +12,7 @@ public interface IFoyerService {
     void deleteFoyer(Long idFoyer);
     List<Foyer> getAllFoyer();
     Foyer updateFoyer(Foyer foyer);
+
+    Foyer findById(Long id);
+
 }

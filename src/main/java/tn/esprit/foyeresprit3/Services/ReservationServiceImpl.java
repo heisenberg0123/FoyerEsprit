@@ -34,4 +34,12 @@ rr.deleteById(idReservation);
     public Reservation updateReservation(Reservation reservation) {
         return rr.save(reservation);
     }
+
+
+    @Override
+    public Reservation findById(String ch){
+        return rr.findById(ch).get();
+    }
+
+
 }

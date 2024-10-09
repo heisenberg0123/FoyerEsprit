@@ -13,4 +13,10 @@ public interface IReservationService {
     void deleteReservation(String idReservation);
     List<Reservation> getAllReservation();
     Reservation updateReservation(Reservation reservation);
+
+    Reservation findById(String ch);
+
+
+
+
 }

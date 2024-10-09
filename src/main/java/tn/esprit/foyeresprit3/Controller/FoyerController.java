@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.foyeresprit3.Services.IChambreService;
 import tn.esprit.foyeresprit3.Services.IFoyerService;
+import tn.esprit.foyeresprit3.entité.Bloc;
 import tn.esprit.foyeresprit3.entité.Chambre;
 import tn.esprit.foyeresprit3.entité.Foyer;
 
@@ -46,6 +47,12 @@ public class FoyerController {
         return foyer;
     }
 
+    //http://localhost:8089/tpfoyer/foyer/retrieve-foyer/8
+    @GetMapping("/retrieve-foyer/{foyer-id}")
+    public Foyer retrieveFoyer(@PathVariable("foyer-id") Long chId) {
+        Foyer foyer = foyerService.findById(chId);
+        return foyer;
+    }
 
 
 

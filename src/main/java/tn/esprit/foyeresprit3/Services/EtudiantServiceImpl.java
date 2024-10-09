@@ -32,4 +32,11 @@ et.deleteById(idCEtudiant);
     public Etudiant updateEtudiant(Etudiant etudiant) {
         return et.save(etudiant);
     }
+
+
+    @Override
+    public Etudiant findById(Long id){
+        return et.findById(id).get();
+    }
+
 }

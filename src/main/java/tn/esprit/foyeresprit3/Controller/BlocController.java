@@ -49,4 +49,14 @@ public class BlocController {
     }
 
 
+    //http://localhost:8089/tpfoyer/bloc/retrieve-bloc/8
+    @GetMapping("/retrieve-bloc/{bloc-id}")
+    public Bloc retrieveBloc(@PathVariable("bloc-id") Long chId) {
+        Bloc bloc = blocService.findById(chId);
+        return bloc;
+    }
+
+
+
+
 }
