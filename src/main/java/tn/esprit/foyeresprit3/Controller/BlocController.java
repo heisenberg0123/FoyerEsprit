@@ -62,5 +62,8 @@ public class BlocController {
 
 
 
-
+@PutMapping("afecterchambre")
+    Bloc affecter(Long id,List<Long>numero){
+        return blocService.affecterChambreaBloc(id,numero);
+}
 }

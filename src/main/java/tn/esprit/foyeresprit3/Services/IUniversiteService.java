@@ -13,5 +13,7 @@ public interface IUniversiteService {
     Universite updateUniversite(Universite universite);
 
     Universite findById(Long id);
+Universite affecterFoyeraUniver(Long id ,String nom);
 
+Universite desaffecterFoyer(Long id);
 }

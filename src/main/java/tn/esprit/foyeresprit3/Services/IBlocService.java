@@ -13,5 +13,5 @@ public interface IBlocService {
 
     Bloc findById(Long id);
 
-
+Bloc affecterChambreaBloc(Long id,List<Long>numero);
 }

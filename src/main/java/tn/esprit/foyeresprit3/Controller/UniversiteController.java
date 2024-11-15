@@ -52,6 +52,12 @@ public class UniversiteController {
     }
 
 
-
-
+@PutMapping("affecter")
+    public Universite affecter(Long  id,String nomUni){
+        return universiteService.affecterFoyeraUniver(id,nomUni);
+}
+@PutMapping("deffecter")
+    Universite deffecter(Long id){
+        return universiteService.desaffecterFoyer(id);
+    }
 }
