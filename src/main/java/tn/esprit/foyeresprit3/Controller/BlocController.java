@@ -1,5 +1,7 @@
 package tn.esprit.foyeresprit3.Controller;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.foyeresprit3.Services.IBlocService;
@@ -11,7 +13,7 @@ import java.util.List;
 
 
 
-
+@Tag(name="Gestion Bloc")
 @RestController
 @AllArgsConstructor
 @RequestMapping("/bloc")
@@ -22,6 +24,8 @@ public class BlocController {
 
 
 
+
+    @Operation(description = "get All bloc  test")
     // http://localhost:8089/tpfoyer/bloc/getallbloc
     @GetMapping("/getallbloc")
     public List<Bloc> getBloc() {

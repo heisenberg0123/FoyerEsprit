@@ -8,6 +8,8 @@ import tn.esprit.foyeresprit3.entité.Bloc;
 import tn.esprit.foyeresprit3.entité.Chambre;
 import tn.esprit.foyeresprit3.entité.Etudiant;
 
+import java.awt.dnd.DropTargetEvent;
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -37,7 +39,8 @@ public class EtudiantController {
     }
     // http://localhost:8089/tpfoyer/etudiant/remove-etudiant/{etudiant-id}
     @DeleteMapping("/remove-etudiant/{etudiant-id}")
-    public void removeEtudinat(@PathVariable("etudiant-id") Long chId) {
+    public void removeEtudinat(@PathVariable("etudiant-id") Long chId)
+    {
         etudiantService.deleteEtudiant(chId);
     }
     // http://localhost:8089/tpfoyer/etudiant/modify-etudiant
@@ -54,5 +57,8 @@ public class EtudiantController {
         return etudiant;
     }
 
-
+@GetMapping("nomEtudiants")
+    public List<Etudiant> getNomEtudiantByanneUniverqite(Date anne){
+        return etudiantService.getnometudiantbyanneeUniver(anne);
+}
 }

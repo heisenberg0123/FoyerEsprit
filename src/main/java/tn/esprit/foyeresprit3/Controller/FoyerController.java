@@ -55,6 +55,9 @@ public class FoyerController {
     }
 
 
-
+@GetMapping("/FoyerBynumeroChambre")
+    public List<Foyer>getFoyerByNumeroChambre(Long numero){
+        return foyerService.getFoyerBynumeroChambre(numero);
+}
 
 }

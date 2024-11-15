@@ -6,4 +6,10 @@ import tn.esprit.foyeresprit3.entité.Bloc;
 import tn.esprit.foyeresprit3.entité.Chambre;
 @Repository
 public interface BlocRepositorie extends JpaRepository<Bloc,Long> {
+
+
+
+
+
+
 }

@@ -17,8 +17,7 @@ import java.util.Set;
 @NoArgsConstructor
 public class Reservation {
     @Id
-    //kif tabda string man7otuch generated value
-   // @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private String idReservation;
     private Date anneUniversitaire;
     private Boolean estValide;

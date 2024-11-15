@@ -14,5 +14,6 @@ public interface IFoyerService {
     Foyer updateFoyer(Foyer foyer);
 
     Foyer findById(Long id);
+    List<Foyer>getFoyerBynumeroChambre(Long numero);
 
 }

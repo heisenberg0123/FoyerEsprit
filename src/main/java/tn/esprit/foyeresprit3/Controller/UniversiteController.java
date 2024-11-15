@@ -2,10 +2,7 @@ package tn.esprit.foyeresprit3.Controller;
 
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import tn.esprit.foyeresprit3.Services.IFoyerService;
 import tn.esprit.foyeresprit3.Services.IUniversiteService;
-import tn.esprit.foyeresprit3.entité.Bloc;
-import tn.esprit.foyeresprit3.entité.Foyer;
 import tn.esprit.foyeresprit3.entité.Universite;
 
 import java.util.List;

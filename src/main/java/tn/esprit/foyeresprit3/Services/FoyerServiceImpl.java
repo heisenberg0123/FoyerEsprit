@@ -38,5 +38,9 @@ fr.deleteById(idFoyer);
         return fr.findById(id).get();
     }
 
+public List<Foyer>getFoyerBynumeroChambre(Long numero){
+        return fr.getfoyerparnumeroChambre(numero);
+}
+
 
 }

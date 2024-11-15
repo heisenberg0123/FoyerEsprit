@@ -1,5 +1,6 @@
 package tn.esprit.foyeresprit3.entité;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -26,6 +27,6 @@ public class Chambre {
     Set<Reservation> r;
 
     @ManyToOne
-            //(mappedBy ="chambres")
+    @JsonIgnore
     private Bloc bloc;
 }
